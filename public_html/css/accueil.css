@@ -7,4 +7,18 @@ and open the template in the editor.
     Created on : 10 oct. 2018, 16:01:44
     Author     : Administrateur
 */
-
+body{
+  /*  background:url("../image/donjon.jpg");*/
+  text-align: center;
+}
+.blocIdentification{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:400px;
+    margin: 0 auto;
+    align-items: center;
+}
+.blocAvatar{
+    flex-direction: row;
+}
