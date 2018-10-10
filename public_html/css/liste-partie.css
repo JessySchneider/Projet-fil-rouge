@@ -8,3 +8,22 @@ and open the template in the editor.
     Author     : Administrateur
 */
 
+.liste-parties{
+    padding:20px;
+    background-color: #b2c0ff;
+    border:1px solid black;
+}
+
+.nom-partie{
+    padding:20px;
+    background-color:#faffb2;
+    border:1px solid black;
+}
+
+
+.informations-participant{
+    padding:20px;
+    background-color:#b2ffb9;
+    border:1px solid black;
+    
+}
