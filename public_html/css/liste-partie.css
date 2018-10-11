@@ -8,22 +8,197 @@ and open the template in the editor.
     Author     : Administrateur
 */
 
-.liste-parties{
+
+/* --- Bloc CSS pour l'encadré de l'utilisateur connecté ---- */
+@font-face {
+    font-family: "enchanted_land-webfont";
+    src: url("../font/enchanted_land-webfont.eot"),
+    url("../font/enchanted_land-webfont.woff") format("woff"),
+    url("../font/enchanted_land-webfont.otf") format("opentype");
+}
+
+
+body{
+    /*background-color: #f9f9f9;*/
+    background:url("../image/login.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    color:white;
+    font-family: "enchanted_land-webfont";
+    font-size:16px;
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+
+.informations-utilisateur{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    margin-bottom: 5px;
+    width:200px;
+    background-color:#a50000;
+    color:white;
+    box-shadow:0px 0px 7px 1px rgba(153,153,153,0.62);
     padding:20px;
-    background-color: #b2c0ff;
-    border:1px solid black;
+    font-weight:bold;
+    font-size:2rem;
+    text-shadow:1px 1px 2px black;
+}
+
+
+.informations-utilisateur, .container-listes-parties{
+    border-radius: 5px;
+}
+
+
+/* ---- Container creation partie --- */
+.container-creation-partie{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 600px;
+    margin: 0 auto;
+    
+}
+
+.container-creation-partie input[type=text]{
+    border-radius: 5px;
+    border:inherit;
+    width:400px;
+    padding:5px;
+    transition:all 0.3s ease-out;
+   
+}
+
+.container-creation-partie input[type=text]:focus{
+    border-radius: 5px;
+    box-shadow: 0px 0px 29px 0px rgba(219,35,35,1);
+    outline: rgba(219,35,35,1) auto 5px;
+}
+
+.creer-une-partie{
+    cursor:pointer;
+    padding:10px;
+    color:white;
+    background-color:#b1b1b1;
+    border:inherit;
+    border-radius: 5px;
+    transition : all 0.3s ease-out;
+}
+
+.creer-une-partie:hover{
+    color:white;
+    background-color: #888888;
+}
+
+.message-error, .message-succes{
+    text-align: center;
+    max-width:40%;
+    margin: 10px auto;
+    font-size: 2rem;
+    position:relative;
+    padding:20px;
+}
+#message{
+    opacity:0;
+}
+
+.message-succes{
+    background-color: #119200;
+}
+
+.message-error{
+    background-color: #a50000;
+}
+
+.icone-message{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:-10px;
+    margin-right:-10px;
+}
+
+/* ---- Bloc CSS pour la liste des parties ---*/
+
+.titre-liste-partie{
+    text-align: center;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    padding:10px;
+    font-size:3rem;
+    text-shadow:1px 1px 2px black;
+    width: 80%;
+    margin:30px auto 10px auto;
+}
+
+
+.container-listes-parties{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;  
+    flex-wrap: wrap;
+}
+
+.container-listes-parties h2{
+    display:block;
+}
+
+.bloc-partie{
+    width: 300px;
+    background-color:#faffb280;
+    position:relative;
+    min-height: 405px;
+    margin:20px 40px 20px 0px;
+}
+.bloc-partie img{
+    height: 50px;
+    margin-right:5px;
+    
 }
 
 .nom-partie{
     padding:20px;
-    background-color:#faffb2;
-    border:1px solid black;
+    background-color:#faffb280;
+    font-size:2rem;
+    text-shadow:1px 1px 2px black;
 }
-
 
 .informations-participant{
-    padding:20px;
-    background-color:#b2ffb9;
-    border:1px solid black;
+    margin:20px 0px;
+    background-color:#faffb280;
+    font-size:2rem;
+    display: flex;
+    text-shadow:1px 1px 2px black;
+    /*align-content: center;*/
     
 }
+.informations-participant span{
+    line-height: 50px;
+}
+
+
+
+.rejoindre-partie{
+    width: 100%;
+    padding:10px;
+    color:white;
+    background-color:#b1b1b1CC;
+    border:inherit;
+    position: absolute;
+    bottom: 0;
+    transition : all 0.3s ease-out;
+}
+
+.rejoindre-partie:hover{
+    cursor: pointer;
+    color:black;
+    font-weight: bold;
+    background-color: #ffffffCC;   
+}
+
+
+
+ 

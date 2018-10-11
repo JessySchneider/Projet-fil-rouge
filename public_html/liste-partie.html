@@ -9,33 +9,113 @@ and open the template in the editor.
         <title>Jeu de carte Magie-magie</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link href="css/liste-partie.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="informations-utilisateur">
-            
+        <div class="informations-utilisateur">   
+            <img src="image/avatar2.jpg" alt=""/>
+            Jessy
         </div>
-        <div class="liste-parties">
-            <div class="nom-partie">
-                Partie de test
-            </div>
-            <div class="informations-participant">
-                Player N°1
-            </div>
-            <div class="informations-participant">
-                Player N°2
-            </div>
-            <div class="informations-participant">
-                Player N°3
-            </div>
-            <div class="informations-participant">
-                Player N°4
-            </div>
-            
-        </div>
-        <div class="creation-partie">
-            
-        </div>
+ 
+            <form class="container-creation-partie">
+                <input type="text" name="nomPartie"  placeholder="Nom de votre partie" />
+                <input type="submit" value="Créer une partie" class="creer-une-partie" />
+            </form>
+        <div id="message"></div>
+        <h2 class="titre-liste-partie">Liste des parties disponibles </h2>
         
+        <div class="container-listes-parties">
+            <div class="bloc-partie">
+                <div class="nom-partie">
+                    Partie de test
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°1</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°2</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°3</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°4</span>
+                </div>
+                <button class="rejoindre-partie">Rejoindre la partie</button>       
+            </div>
+             <div class="bloc-partie">
+                <div class="nom-partie">
+                    Partie de test
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°1</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°2</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°3</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°4</span>
+                </div>
+                <button class="rejoindre-partie">Rejoindre la partie</button>       
+            </div>
+            
+            <div class="bloc-partie">
+                <div class="nom-partie">
+                    Partie de test
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°1</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°2</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°3</span>
+                </div>
+                <button class="rejoindre-partie">Rejoindre la partie</button>       
+            </div>
+            <div class="bloc-partie">
+                <div class="nom-partie">
+                    Partie de test
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°1</span>
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°2</span>
+                </div>               
+                <button class="rejoindre-partie">Rejoindre la partie</button>       
+            </div>
+            <div class="bloc-partie">
+                <div class="nom-partie">
+                    Partie de test
+                </div>
+                <div class="informations-participant">
+                    <img src="image/avatar2.jpg" alt=""/>
+                    <span>Player N°1</span>
+                </div>                
+                
+                <button class="rejoindre-partie">Rejoindre la partie</button>       
+            </div>
+        </div>
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="js/liste-partie.js" type="text/javascript"></script>
     </body>
 </html>
