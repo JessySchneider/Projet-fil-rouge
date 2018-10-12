@@ -8,14 +8,10 @@
 
 
 $('.creer-une-partie').on("click",createGame);
-
-
 $(document).on("click",".icone-message",removeMessageFromDOM);
-
-
+ $(".container-creation-partie").submit(generateHTMLListePartie);
 
 function createGame(event){
-    event.preventDefault();
     var nomPartie = $("input[name=nomPartie]").val();      
     if(nomPartie.length > 0 ){
         $("#message").html("<div class='message-succes'>Votre partie : "+nomPartie+" a bien été créée <i class='fas fa-times-circle icone-message'></i></div>");
@@ -28,8 +24,17 @@ function createGame(event){
 
 function removeMessageFromDOM(){
     $('#message').animate({'opacity' :0, 'height':'hide'},400);
-    $('[class^="message"]').animate({'opacity' :0, 'height':'hide'},400).html("");
-    
+    $('[class^="message"]').animate({'opacity' :0, 'height':'hide'},400).html("");    
+}
+
+function generateHTMLListePartie(e){
+    e.preventDefault();  //prevent form from submitting
+    var data = $("#create-partie-form :input").serializeArray();
+    if(data[0].value !== ""){
+        var html = '<div class="bloc-partie"><div class="nom-partie">'+data[0].value+'</div><button class="rejoindre-partie">Rejoindre la partie</button></div>';
+        $('.container-listes-parties').append(html).animate({'height':'show'},400);
+    }
     
 }
 
+   
