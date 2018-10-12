@@ -8,3 +8,92 @@ and open the template in the editor.
     Author     : Administrateur
 */
 
+@font-face {
+    font-family: "enchanted_land-webfont";
+    src: url("../font/enchanted_land-webfont.eot"),
+    url("../font/enchanted_land-webfont.woff") format("woff"),
+    url("../font/enchanted_land-webfont.otf") format("opentype");
+}
+
+
+body{
+    
+    background:url("../image/login.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    color:white;
+    font-family: "enchanted_land-webfont";
+    font-size:16px;
+    margin: 0 auto;
+    
+}
+
+
+.adversaire-side{
+    
+}
+
+.adversaire-top{
+    height:500px;
+
+}
+
+/* ------------ Partie correspondant au joueur du bas ---------------- */
+
+.joueur-bottom{
+/*    position:absolute;
+    bottom: 0;*/
+    margin:auto;
+    display: flex;
+    align-content: flex-start;
+    width: 70%;
+    
+}
+
+.carte-joueur{
+    margin-left:100px;
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.carte-joueur img{
+    height: 200px;
+    transform-origin: bottom;
+    position:absolute;
+    transition: transform 0.3s ease-out;
+}
+
+.carte-joueur img:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px 10px rgba(247,0,41,0.88);
+}
+
+.container-avatar-joueur-plateau{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 120px;
+ 
+ }
+
+.container-avatar-joueur-plateau span{
+    font-size: 2rem;
+    text-shadow:1px 1px 2px black;
+    text-align:center;
+    background-color:#0d0d0d80;
+ }
+ 
+
+ 
+ .container-avatar-joueur-plateau img{
+    height: 200px;
+    width: 120px;
+ }
+ 
+ 
+ .container-avatar-joueur-plateau .avatar-joueur-plateau{
+     position: absolute;
+     z-index: -1;
+ }

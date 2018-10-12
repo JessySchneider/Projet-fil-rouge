@@ -77,7 +77,7 @@ main{
 .avatar-joueur{
     position: absolute;
     top:40px;
-    height: 300px;
+    height: 320px;
     z-index: -1;
 }
 
