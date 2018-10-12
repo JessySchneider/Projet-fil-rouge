@@ -6,6 +6,8 @@
 }
 body{
   background:url("../image/login.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
   text-align: center;
   font-family: "enchanted_land-webfont";
   font-size: 16px;
@@ -48,4 +50,8 @@ h1{
     border-color: green;
     border-radius: 30px;
 /*    transition:all 0.3s ease-out;*/
+}
+img{
+width: 150px;
+height: 200px;
 }
