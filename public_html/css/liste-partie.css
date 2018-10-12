@@ -34,17 +34,37 @@ body{
 
 .informations-utilisateur{
     display: flex;
-    align-items: center;
-    justify-content: space-around;  
-    margin-bottom: 5px;
-    width:200px;
-    background-color:#a5000080;
-    color:white;
-    box-shadow:0px 0px 7px 1px rgba(153,153,153,0.62);
-    padding:20px;
+    width:147px;
+    color:white;    
     font-weight:bold;
     font-size:2rem;
     text-shadow:1px 1px 2px black;
+    position:relative;
+    margin-top:20px;
+    flex-direction: column;
+    border-radius:5px;
+    box-shadow: 0px 0px 20px 10px rgba(247,0,41,0.88);
+}
+.informations-utilisateur span{
+    position:absolute;
+    bottom: 33px;
+    width:100%;
+    text-align:center;
+    background-color:#0d0d0d80;
+}
+
+
+.informations-utilisateur img{
+    
+    align-self: center;
+    height: 300px;
+    
+}
+
+.avatar-joueur{
+    position: absolute;
+    z-index: -1;
+    width: 147px;
 }
 
 
@@ -56,7 +76,7 @@ body{
 /* ---- Container creation partie --- */
 .container-creation-partie{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 600px;
@@ -65,15 +85,13 @@ body{
 }
 
 .container-creation-partie input[type=text]{
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
     border:inherit;
     width:400px;
     padding:5px;
     transition:all 0.3s ease-out;
    
 }
-
-
 
 .container-creation-partie input[type=text]:focus{
     border-radius: 5px;
@@ -85,9 +103,9 @@ body{
     cursor:pointer;
     padding:10px;
     color:white;
-    background-color:#b1b1b1;
+    background-color:#b70000;
     border:inherit;
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
     transition : all 0.3s ease-out;
     font-family: "enchanted_land-webfont";
     font-size:1.5rem;
@@ -95,7 +113,7 @@ body{
 
 .creer-une-partie:hover{
     color:white;
-    background-color: #888888;
+    background-color: #a50000;
 }
 
 @media screen and (max-width:700px){
@@ -175,7 +193,7 @@ body{
 
 .bloc-partie{
     width: 300px;
-    background-color:#faffb280;
+    background-color:#ffffff30;
     position:relative;
     min-height: 405px;
     margin:20px 40px 20px 0px;
@@ -189,14 +207,14 @@ body{
 
 .nom-partie{
     padding:20px;
-    background-color:#faffb280;
+    background-color:#ffffffAA;
     font-size:1.5rem;
     text-shadow:1px 1px 2px black;
 }
 
 .informations-participant{
     margin:20px 0px;
-    background-color:#faffb280;
+    background-color:#ffffffAA;
     font-size:2rem;
     display: flex;
     text-shadow:1px 1px 2px black;
@@ -213,7 +231,7 @@ body{
     width: 100%;
     padding:10px;
     color:white;
-    background-color:#b1b1b1CC;
+    background-color:#b70000;
     border:inherit;
     position: absolute;
     bottom: 0;
@@ -224,9 +242,9 @@ body{
 
 .rejoindre-partie:hover{
     cursor: pointer;
-    color:black;
+    color:white;
     font-weight: bold;
-    background-color: #ffffffCC;   
+    background-color: #a50000;   
 }
 
 
