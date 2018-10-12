@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Projet fil rouge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/jeu.css" rel="stylesheet" type="text/css"/>
+
+        <script src="js/accueil.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <h1>C'est à vous de jouer</h1> 
+
+        <div class="blocIdentification">
+            <form name="form"  >
+                <div class="blocAvatar">
+                        <img src="image/carte-joueur-avatar.png" alt="" />
+                        <img class="sort" src="image/crapaud.png" alt="" />    
+                </div>
+                <div class="blocAvatar">
+                        <img src="image/carte-joueur-avatar.png" alt="" />
+                        <img class="sort" src="image/chauvesouris.png" alt="" />    
+                </div>
+                <div class="blocAvatar">
+                        <img src="image/carte-joueur-avatar.png" alt="" />
+                        <img class="sort" src="image/corne.jpg" alt="" />    
+                </div>
+                <div class="blocAvatar">
+                        <img src="image/carte-joueur-avatar.png" alt="" />
+                        <img class="sort" src="image/lapis1.jpg" alt="" />    
+                </div>
+                <div class="blocAvatar">
+                        <img src="image/carte-joueur-avatar.png" alt="" />
+                        <img class="sort" src="image/mandragore.jpg" alt="" />    
+                </div>
+                
+                <input type="submit" value="Valider" class="valide">
+            </form>
+        </div> 
+
+
+
+
+
+
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script>
+            function clicImg() {
+                var possedeClasse = $(this).hasClass('imagetoggle');
+
+                if (possedeClasse === true) {
+                    $(this).removeClass('imagetoggle');
+                } else {
+                    $('.blocAvatar img').removeClass("imagetoggle");
+
+                    $(this).addClass("imagetoggle");
+                }
+            }
+            //armer un event sur chaque img
+            $('.blocAvatar img').on("click", clicImg);
+
+          
+            function controle(event) {
+                event.preventDefault();
+                var pseudoRenseigne = false;
+                var avatarSelectionne = false;
+                var pseudo = document.form.utilisateur.value;
+                
+                if (pseudo.length > 0) {
+                    pseudoRenseigne = true;
+                }
+                
+                $('img').each (function(){
+                    if ($(this).hasClass("imagetoggle")){
+                        var cheminImage = $(this).attr('src');
+                            avatarSelectionne = true;
+                    }
+                });
+                
+                if(avatarSelectionne === false && pseudoRenseigne===false){
+                    alert('Veuillez entrer un nom et choisir un avatar');
+                }
+                else if (avatarSelectionne === true && pseudoRenseigne === true){
+                    alert('Inscription terminée');
+                }
+                else if (avatarSelectionne === true && pseudoRenseigne === false){
+                    alert('Il manque le pseudo');
+                }
+                else if (avatarSelectionne === false && pseudoRenseigne === true){
+                    alert('Veuillez choisir une image');
+                }
+            }
+            
+            $('input[value=Valider]').on("click", controle);
+
+
+
+
+        </script>
+    </body>
+</html>
