@@ -34,8 +34,21 @@ body{
 }
 
 .adversaire-top{
-    height:500px;
+    height:300px;
+    display:flex;
+    width: 70%;
+    margin: auto;
+    background-color: #0d0d0d80;
+}
 
+.carte-adversaire{
+    margin-left:350px;  
+    margin-top:50px;
+}
+.carte-adversaire img{
+    height: 150px;
+    position:absolute;
+    transform-origin : 2em -20em;
 }
 
 /* ------------ Partie correspondant au joueur du bas ---------------- */
@@ -45,22 +58,21 @@ body{
     bottom: 0;*/
     margin:auto;
     display: flex;
-    align-content: flex-start;
+    align-content: space-around;
     width: 70%;
+    background-color: #ffffff30;
     
 }
 
 .carte-joueur{
-    margin-left:100px;
-    margin-top:30px;
-    display: flex;
-    justify-content: center;
-    
+    margin-left:350px;  
+    margin-top:-50px;  
 }
 
 .carte-joueur img{
     height: 200px;
     position:absolute;
+    transform-origin : 3em 30em;
     transition: all 0.3s ease-out;
 }
 

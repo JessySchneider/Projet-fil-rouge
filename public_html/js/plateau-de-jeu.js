@@ -5,39 +5,49 @@
  */
 
 
-var maximumAngle = 50;
-var cartes = $('.carte-joueur img').length;
+var maximumAngle = 90;
+var cartesJoueur = $('.carte-joueur img').length;
+var iJoueur = -(Math.floor(cartesJoueur/2));
+var angleJoueur = maximumAngle/cartesJoueur;
 
-var i = -(Math.floor(cartes/2));
+var cartesAdversaire = $('.carte-adversaire img').length;
 
-var angle = maximumAngle/cartes ;
-var rad = 16.65;
+
+var iAdversaire = -(Math.floor(cartesAdversaire/2));
+var angleAdversaire = maximumAngle/cartesAdversaire;
 
 $('.carte-joueur img').each(function(){
+    $(this).css("transform","rotate("+angleJoueur*iJoueur+"deg)");
+    iJoueur++;
+});
+
+$('.carte-adversaire img').each(function(){
+var angleAdversaire = maximumAngle/cartesAdversaire;
+$(this).css("transform","rotate("+angleAdversaire*iAdversaire+"deg)");
+    iAdversaire++;
+});
+
+// var rad = 16.65;
+// $('.carte-joueur img').each(function(){
     
-    posX = Math.round((Math.cos(rad)*300)+700);
-    posY = Math.round((Math.sin(rad)*300)+770);
-    $(this).css("transform","rotate("+angle*i+"deg)");
-    $(this).css("top",posY+"px");
-    $(this).css("left",posX+"px");
-    i++;
+//     // posX = Math.round((Math.cos(rad)*300)+700);
+//     // posY = Math.round((Math.sin(rad)*300)+770);
+//     $(this).css("transform","rotate("+angle*i+"deg)");
+//     // $(this).css("top",posY+"px");
+//     // $(this).css("left",posX+"px");
+//      i++;
     
-    if(cartes < 5){
-        rad = rad +(1/cartes);
-    }else{
-         rad = rad + (1.5/cartes);
-    }
+//     // if(cartes < 5){
+//     //     rad = rad +(1/cartes);
+//     // }else{
+//     //      rad = rad + (1.5/cartes);
+//     // }
    
 
-});
+// });
 
 
 $('.carte-joueur img').on("click",function(){
-//    if($(this).attr("data-is-hover") === undefined || $(this).attr("data-is-hover") === "false" ){
-//        var originalPosY =  $(this).position();
-//        $(this).css("top",originalPosY.top-20);
-//        $(this).attr("data-is-hover", true);
-//    }
         if($(this).hasClass("clicked-card") === false){
             $(this).addClass("clicked-card");
         }else{
@@ -46,8 +56,3 @@ $('.carte-joueur img').on("click",function(){
     
 });
 
-//$('.carte-joueur img').mouseout(function(){
-//    var posY =  $(this).position();
-//    $(this).stop().css("top",posY.top+20);
-//    $(this).attr("data-is-hover",false);
-//});
