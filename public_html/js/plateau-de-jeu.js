@@ -28,21 +28,26 @@ $('.carte-joueur img').each(function(){
          rad = rad + (1.5/cartes);
     }
    
-//    console.log("Pos x : "+posX);
-//    console.log("Pos y : "+posY);
 
 });
 
-$('.carte-joueur img').hover(function(){
-    console.log("Hello");
-    var posY =  $(this).position();
-    console.log(posY.top+20);
-    $(this).css("top",posY.top+20);
+
+$('.carte-joueur img').on("click",function(){
+//    if($(this).attr("data-is-hover") === undefined || $(this).attr("data-is-hover") === "false" ){
+//        var originalPosY =  $(this).position();
+//        $(this).css("top",originalPosY.top-20);
+//        $(this).attr("data-is-hover", true);
+//    }
+        if($(this).hasClass("clicked-card") === false){
+            $(this).addClass("clicked-card");
+        }else{
+            $(this).removeClass("clicked-card");
+        }
+    
 });
 
-$('.carte-joueur img').mouseout(function(){
-    console.log("Hello");
-    var posY =  $(this).position();
-    console.log(posY.top-20);
-    $(this).css("top",posY.top-20);
-});
+//$('.carte-joueur img').mouseout(function(){
+//    var posY =  $(this).position();
+//    $(this).stop().css("top",posY.top+20);
+//    $(this).attr("data-is-hover",false);
+//});

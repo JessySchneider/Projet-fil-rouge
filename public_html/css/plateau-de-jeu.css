@@ -1,4 +1,4 @@
-/*
+ /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
@@ -60,14 +60,14 @@ body{
 
 .carte-joueur img{
     height: 200px;
-    transform-origin: bottom;
     position:absolute;
-    transition: transform 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .carte-joueur img:hover{
     transform: scale(1.2);
     box-shadow: 0px 0px 20px 10px rgba(247,0,41,0.88);
+    z-index:10;
 }
 
 .container-avatar-joueur-plateau{
