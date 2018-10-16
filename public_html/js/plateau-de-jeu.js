@@ -5,14 +5,12 @@
  */
 
 
-var maximumAngle = 90;
+var maximumAngle = 70;
 var cartesJoueur = $('.carte-joueur img').length;
 var iJoueur = -(Math.floor(cartesJoueur/2));
 var angleJoueur = maximumAngle/cartesJoueur;
 
 var cartesAdversaire = $('.carte-adversaire img').length;
-
-
 var iAdversaire = -(Math.floor(cartesAdversaire/2));
 var angleAdversaire = maximumAngle/cartesAdversaire;
 

@@ -28,6 +28,28 @@ body{
     
 }
 
+.informations-sort{
+    width: 700px;
+    height:400px;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.sort{
+    margin: 0px 5px;
+    font-size: 1.5rem;
+    /* background-color: #ffffff30; */
+}
+
+.informations-sort img{
+    height:100px;
+    padding:0 5px 0 5px;
+}
 
 .adversaire-side{
     
