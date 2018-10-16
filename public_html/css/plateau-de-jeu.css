@@ -29,25 +29,59 @@ body{
 }
 
 .informations-sort{
-    width: 700px;
-    height:400px;
-    background-color: black;
-    position: absolute;
+    /* display: none; Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    /* display: flex; */
+   
+}
+
+.testmodal{
+    background-color: #fefefeAA;
+    margin: 4% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid black;
+    color:black;
+    width: 70%; /* Could be more or less, depending on screen size */
+    height:445px;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: row;    
     align-content: flex-start;
     flex-wrap: wrap;
+
+}
+.ingredient-sort{
+    display: inline-flex;
+    flex-direction: row;
+    align-content: flex-start;
+
 }
 
 .sort{
     margin: 0px 5px;
     font-size: 1.5rem;
+    width: 48%;
+    height: 150px;
+    display: flex;
+    align-self:center;
+    justify-content: center;
+    /* text-align: center; */
     /* background-color: #ffffff30; */
 }
 
+.sort img, .sort i{
+    align-self: center;
+}
+
 .informations-sort img{
-    height:100px;
+    height:120px;
     padding:0 5px 0 5px;
 }
 
