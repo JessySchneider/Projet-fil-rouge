@@ -5,8 +5,6 @@
  */
 
 
-
-
 $('.creer-une-partie').on("click",createGame);
 $(document).on("click",".icone-message",removeMessageFromDOM);
  $(".container-creation-partie").submit(generateHTMLListePartie);
